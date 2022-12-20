@@ -58,7 +58,8 @@ public class Receiver extends Thread {
                 String senderName = sentence.substring(0, index);
                 String message = sentence.substring(index + 1);
                 int realLength = packet.getLength() - senderName.getBytes().length - ":".getBytes().length;
-                output.write(String.format("Received %d bytes from %s(%s): %s", realLength, senderName, packet.getAddress(), message));
+                String address = packet.getAddress().toString().substring(1);
+                output.write(String.format("Received %d bytes from %s(%s): %s", realLength, senderName, address, message));
             } catch(IOException e) {
                 e.printStackTrace();
             }
