@@ -19,7 +19,7 @@ public class Main extends JFrame implements Writable {
 
     public Main() {
         setTitle("UDP Multicast / Broadcast");
-        setSize(635, 400);
+        setSize(700, 400);
         setResizable(false);
 
         outputArea = new JTextArea();
@@ -64,7 +64,7 @@ public class Main extends JFrame implements Writable {
         secondRow.add(messageField);
         broadcastCheckbox = new JCheckBox("Broadcast");
         broadcastCheckbox.setBackground(Color.WHITE);
-        secondRow.add(broadcastCheckbox);
+//        secondRow.add(broadcastCheckbox);
         sendButton = new JButton(" Send ");
         secondRow.add(sendButton);
 
